@@ -65,7 +65,7 @@ const App = () => {
       </div>
       <div>
         <form onSubmit={Start}> 
-        <label for="fname">Enter Value In Seconds:</label>
+        <label>Enter Value In Seconds:</label>
         <br/>
             <input type='text' name='count' placeholder="Enter Value in seconds..." required/>
             <button type="submit">Start</button>
