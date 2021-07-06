@@ -41,11 +41,12 @@ const App = () => {
     e.preventDefault()
     setSeconds(e.target.count.value)
     setAgain(e.target.count.value)
+    document.getElementById("clear").value = "";
   }
 
   const Stop = () => {
     setSeconds(0)
-    setAgain('')
+    setAgain(0)
     clearTimeout(myInterval);
     document.getElementById("divChange").style.background = 'black';
   }
@@ -67,7 +68,7 @@ const App = () => {
         <form onSubmit={Start}> 
         <label>Enter Value In Seconds:</label>
         <br/>
-            <input type='text' name='count' placeholder="Enter Value in seconds..." required/>
+            <input type='text' name='count' id='clear' placeholder="Enter Value in seconds..." required/>
             <button type="submit">Start</button>
          </form>
          <button onClick={Stop}>Stop</button>
